@@ -1,0 +1,28 @@
+Index: st/st.c
+===================================================================
+--- st.orig/st.c
++++ st/st.c
+@@ -1058,6 +1058,11 @@ tnew(int col, int row)
+ 	treset();
+ }
+ 
++int tisaltscr(void)
++{
++	return IS_SET(MODE_ALTSCREEN);
++}
++
+ void
+ tswapscreen(void)
+ {
+Index: st/st.h
+===================================================================
+--- st.orig/st.h
++++ st/st.h
+@@ -89,6 +89,7 @@ void sendbreak(const Arg *);
+ void toggleprinter(const Arg *);
+ 
+ int tattrset(int);
++int tisaltscr(void);
+ void tnew(int, int);
+ void tresize(int, int);
+ void tsetdirtattr(int);

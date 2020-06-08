@@ -1,0 +1,8 @@
+st-scrollback-20200504-28ad288.diff
+st-scrollback-mouse-20191024-a2c479c.diff
+st-scrollback-mouse-altscreen-20190131-e23acb9.diff
+st-no_bold_colors-20170623-b331da5.diff
+disable_manpage_terminfo.patch
+st-desktop.patch
+st-xresources-20190105-3be4cf1.diff
+larger-scrollback-buffer.patch
