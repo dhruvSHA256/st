@@ -6,10 +6,10 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "MesloLGS NF:pixelsize=16:antialias=true:autohint=true";
-static char *font = "JetBrainsMono Nerd Font Mono:style=Regular:pixelsize=16:antialias=true:autohint=true";
-
-static char *font2 = "JoyPixels:pixelsize=16:style=Regular:antialias=true:autohint=true";
-static int borderpx = 20;
+static char *font = "JetBrains Mono NL:style=Regular:pixelsize=16:antialias=true:autohint=true";
+static char *font2 ="JoyPixels:style=Regular:pixelsize=16";
+//static int borderpx = 20;
+static int borderpx = 4;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -204,8 +204,8 @@ ResourcePref resources[] = {
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1} },
-	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1} },
+	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
+	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
