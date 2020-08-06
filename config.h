@@ -9,7 +9,7 @@
 static char *font = "JetBrains Mono NL:style=Regular:pixelsize=16:antialias=true:autohint=true";
 static char *font2 ="JoyPixels:style=Regular:pixelsize=16";
 //static int borderpx = 20;
-static int borderpx = 4;
+static int borderpx = 20;
 
 /*
  * What program is execed by st depends of these precedence rules:
