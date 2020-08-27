@@ -7,14 +7,16 @@
  */
 // static char *font = "MesloLGS NF:pixelsize=16:antialias=true:autohint=true";
 static char *font =
-    "FiraCode Nerd Font "
-    "Mono:style=Retina,Regular:pixelsize=16:antialias=true:autohint=true";
+    "FiraCode Nerd Font Mono:style=Regular:pixelsize=16:antialias=true:autohint=true";
 // static char *font =
 //    "JetBrains Mono
 //    NL:style=Regular:pixelsize=16:antialias=true:autohint=true";
 static char *font2 = "JoyPixels:style=Regular:pixelsize=16";
 // static int borderpx = 20;
-static int borderpx = 20;
+static int borderpx = 10;
+
+/* bg opacity */
+float alpha = 1.0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -82,13 +84,13 @@ char *termname = "st-256color";
  * the st.info and appropriately install the st.info in the environment where
  * you use this st version.
  *
- *	it#$tabspaces,
+ *  it#$tabspaces,
  *
  * Secondly make sure your kernel is not expanding tabs. When running `stty
  * -a` »tab0« should appear. You can tell the terminal to not expand tabs by
  *  running following command:
  *
- *	stty tabs
+ *  stty tabs
  */
 unsigned int tabspaces = 8;
 
@@ -137,7 +139,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
@@ -200,6 +202,7 @@ ResourcePref resources[] = {
     {"borderpx", INTEGER, &borderpx},
     {"cwscale", FLOAT, &cwscale},
     {"chscale", FLOAT, &chscale},
+    {"alpha", FLOAT, &alpha},
 };
 
 /*
