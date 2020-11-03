@@ -7,7 +7,8 @@
  */
 // static char *font = "MesloLGS NF:pixelsize=16:antialias=true:autohint=true";
 static char *font =
-    "FiraCode Nerd Font Mono:style=Regular:pixelsize=16:antialias=true:autohint=true";
+    "VictorMono Nerd Font "
+    "Mono:style=Regular:pixelsize=17:antialias=true:autohint=true";
 // static char *font =
 //    "JetBrains Mono
 //    NL:style=Regular:pixelsize=16:antialias=true:autohint=true";
