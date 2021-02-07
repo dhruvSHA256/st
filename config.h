@@ -22,6 +22,8 @@ static char *font2 = "Operator Mono Lig Book:style=Regular:size=12:antialias=tru
 // static int borderpx = 20;
 static int borderpx = 0;
 
+float grad_alpha = 0; //alpha value that'll change
+float stat_alpha = 0.90; //constant alpha value that'll get added to grad_alpha
 /* bg opacity */
 float alpha = 1.0;
 
