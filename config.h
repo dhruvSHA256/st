@@ -5,25 +5,15 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-// static char *font = "MesloLGS NF:pixelsize=16:antialias=true:autohint=true";
-/* static char *font = */
-/*     "FiraCode Nerd Font
- * Mono:style=Regular:pixelsize=16:antialias=true:autohint=true"; */
-
 static char* font = "Operator Mono Lig Book:style=Regular:size=12:antialias=true:autohint=true";
-static char* font2 = "Operator Mono Lig Book:style=Regular:size=12:antialias=true:autohint=true";
-/* static char *font1 = */
-/*     "VictorMono Nerd Font " */
-/*     "Mono:style=Regular,Italic:pixelsize=17:antialias=true:autohint=true"; */
-// static char *font =
-//    "JetBrains Mono
-//    NL:style=Regular:pixelsize=16:antialias=true:autohint=true";
-/* static char *font2 = "JoyPixels:style=Regular:pixelsize=16"; */
+/* static char* font = "VictorMono Nerd Font Mono:style=Regular:size=11"; */
+/* static char* font =  "FiraCode Nerd Font Mono:style=Regular:size=10"; */
+static char* font2  =  "Symbols Nerd Font:style=2048-em:size=10";
 // static int borderpx = 20;
 static int borderpx = 0;
 
-float grad_alpha = 0; //alpha value that'll change
-float stat_alpha = 0.90; //constant alpha value that'll get added to grad_alpha
+/* float grad_alpha = 0; //alpha value that'll change */
+/* float stat_alpha = 0.90; //constant alpha value that'll get added to grad_alpha */
 /* bg opacity */
 float alpha = 1.0;
 
@@ -218,6 +208,9 @@ ResourcePref resources[] = {
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
+static char *openurlcmd[] = { "/bin/sh", "-c",
+    "/home/dhruv/.local/ubin/linkgrabber.sh",
+    "externalpipe", NULL };
 static MouseShortcut mshortcuts[] = {
     /* mask                 button   function        argument      release alt */
     { ControlMask , Button4 , zoom        , {.f =  +1} } ,
@@ -232,6 +225,7 @@ static MouseShortcut mshortcuts[] = {
 
 static Shortcut shortcuts[] = {
     /* mask                 keysym          function        argument */
+    { TERMMOD, XK_U, externalpipe, { .v = openurlcmd } },
     { XK_ANY_MOD, XK_Break, sendbreak, { .i = 0 } },
     { ControlMask, XK_Print, toggleprinter, { .i = 0 } },
     { ShiftMask, XK_Print, printscreen, { .i = 0 } },
